@@ -6,27 +6,30 @@ namespace GuessingGame
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hey, guess a number!");
-            string response = Console.ReadLine();
-            Console.WriteLine($"Your guess is {response}.");
-
-
-            int ParseResponse = int.Parse(response);
-            int SecretNum = 81;
-            if (ParseResponse == SecretNum)
+            int index = 0;
+            while (index < 4)
             {
-                Console.WriteLine("Success!");
-            }
-            else { Console.WriteLine("Failure!"); }
+                Console.WriteLine("Hey, guess a number!");
+                string response = Console.ReadLine();
+                int ParseResponse = int.Parse(response);
+                int SecretNum = 81;
+                if (ParseResponse == SecretNum)
+                {
+                    Console.WriteLine("Success!");
+                }
+                else { Console.WriteLine("Failure!"); }
+                index++;
 
+            }
 
         }
     }
 }
 
 
-// Display a message to the user asking them to guess the secret number.
-// Display a prompt for the user's guess.
-// Take the user's guess as input and save it as a variable.
-// Display the user's guess back to the screen.
+
+
+// Give the user four chances to guess the number.
+// Continue to display the success or failure messages as in phase 2
+
 
