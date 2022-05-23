@@ -9,6 +9,17 @@ namespace GuessingGame
             Console.WriteLine("Hey, guess a number!");
             string response = Console.ReadLine();
             Console.WriteLine($"Your guess is {response}.");
+
+
+            int ParseResponse = int.Parse(response);
+            int SecretNum = 81;
+            if (ParseResponse == SecretNum)
+            {
+                Console.WriteLine("Success!");
+            }
+            else { Console.WriteLine("Failure!"); }
+
+
         }
     }
 }
