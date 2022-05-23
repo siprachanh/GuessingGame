@@ -17,19 +17,25 @@ namespace GuessingGame
                 {
                     Console.WriteLine("Success!");
                 }
-                else { Console.WriteLine("Failure!"); }
-                index++;
-
+                else
+                {
+                    Console.WriteLine("Your guess is {ParseResponse}");
+                }
+                Console.WriteLine($"You have {3 - index} more chances");
             }
+            index++;
 
         }
+
     }
 }
 
 
 
 
-// Give the user four chances to guess the number.
-// Continue to display the success or failure messages as in phase 2
+//The program should be updated to...
+
+// Display the number of the user's current guess in the prompt. For example, if the user has already guessed one time, the prommpt should say something like Your guess (2)>.
+// End the loop early if the user guesses the correct number.
 
 
